@@ -10,6 +10,7 @@ namespace AdrenalineEffect.Config
         public static ConfigEntry<float> Cooldown;
         public static ConfigEntry<float> Duration;
         public static ConfigEntry<bool> Downsides;
+        public static ConfigEntry<bool> Debug;
 
         public static void RegisterConfig(ConfigFile config)
         {
@@ -29,6 +30,11 @@ namespace AdrenalineEffect.Config
                 true,
                 new ConfigDescription(
                     "Enable tunnelvision after painkiller"));
+
+            Debug = config.Bind(
+                "General Settings",
+                "Debug",
+                false);
         }
     }
 }
